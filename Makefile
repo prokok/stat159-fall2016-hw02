@@ -7,10 +7,13 @@ data:
 	mv Advertising.csv data
 
 report.pdf: report.Rmd regression.Rdata scatterplot-tv-sales.png
+	
 
 regression.Rdata: regression-script.R Advertising.csv
+	
 
 eda-output.txt: eda-script.R Advertising.csv
+	
 
 	
 clean:
