@@ -10,10 +10,13 @@ save(reg,sum_reg, file = "../data/regression.RData")
 pdf("../images/scatterplot-tv-sales.pdf",width=8,height=6)
 plot(dat$TV, dat$Sales, pch = 19, col = "#8e8f94", xlab = "TV advertising budget", ylab = "Sales")
 abline(reg, col = "#5679DF", lwd = 3)
+segments(dat$TV, dat$Sales, dat$TV, predict(reg), col='red')
 dev.off()
 
 png("../images/scatterplot-tv-sales.png", width=800, height=600)
 plot(dat$TV, dat$Sales, pch = 19, col = "#8e8f94", xlab = "TV advertising budget", ylab = "Sales")
 abline(reg, col = "#5679DF", lwd = 3)
+segments(dat$TV, dat$Sales, dat$TV, predict(reg), col='red')
 dev.off()
- 
+
+
