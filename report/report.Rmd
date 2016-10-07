@@ -7,6 +7,7 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+.libPaths(c("C:/Users/vlfgn/Documents/R/win-library/3.3", "C:/Users/vlfgn/Documents/R/win-library/3.3"))
 library(xtable)
 ```
 
@@ -22,7 +23,6 @@ In this report, I will reproduce the main results displayed in section 3.1 *Simp
 The overall goal is to provide advice on how to improve sales of the particular product. More specifically,
 the idea is to determine whether there is an association between advertising and sales, and if so, develop an
 accurate model that can be used to predict sales on the basis of the three media budgets  
-
 
 
 #Data
@@ -48,8 +48,10 @@ To estimate the coefficients $\beta_{0}$ and $\beta_{1}$ we fit a regression mod
 
 We compute the regression coefficients
 
-```{r}
-
+```{r echo = FALSE, results='asis'}
+load("../data/regression.Rdata")
+sum_table = xtable(sum_reg$coefficient, caption="Information about Regression Coefficients")
+print(sum_table, comment=FALSE, type = "latex")
 ```
 
 
@@ -57,9 +59,21 @@ We compute the regression coefficients
 More information about the least squares model is given in the table below:  
 
 
+```{r echo = FALSE, results='asis'}
+ind = data.frame(Quantity=c("R2","RSE","F-stat"), Value = c(sum_reg$r.squared,sum_reg$sigma,sum_reg$fstatistic[1]))
+indice_table = xtable(ind, caption = "Regression Quality Indices")
+print(indice_table, comment=FALSE, type="latex")
+```
+
+
+
 ```{r}
+    
+
 
 ```
+
+
 
 ![scatterplot-tv-sales](../images/scatterplot-tv-sales.png)
 
