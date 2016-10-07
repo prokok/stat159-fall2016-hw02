@@ -1,18 +1,19 @@
 .PHONY: all data clean
 
-all: report.pdf eda-output.txt regression.Rdata
+all: paper/report.pdf data/eda-output.txt data/regression.Rdata
 
 data: 
 	curl -O "http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv"
 	mv Advertising.csv data
 
-report.pdf: report.Rmd regression.Rdata scatterplot-tv-sales.png
+report/report.pdf: report/report.Rmd data/regression.Rdata 
+	cd report; Rscript -e '.libPaths(c("C:/Users/vlfgn/Documents/R/win-library/3.3", "C:/Users/vlfgn/Documents/R/win-library/3.3")); library(rmarkdown); render("report.Rmd")'
 	
-
-regression.Rdata: regression-script.R Advertising.csv
+	
+data/regression.Rdata: code/regression-script.R data/Advertising.csv
 	cd code; Rscript regression-script.R
 	
-eda-output.txt: eda-script.R Advertising.csv
+data/eda-output.txt: code/eda-script.R data/Advertising.csv
 	cd code; Rscript eda-script.R
 	
 clean:
