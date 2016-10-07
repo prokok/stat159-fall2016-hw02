@@ -21,15 +21,12 @@ In this report, I will reproduce the main results displayed in section 3.1 *Simp
 #Introduction 
 
 The overall goal is to provide advice on how to improve sales of the particular product. More specifically,
-the idea is to determine whether there is an association between advertising and sales, and if so, develop an
-accurate model that can be used to predict sales on the basis of the three media budgets  
+the idea is to determine whether there is an association between TV advertising and sales, and if so, develop an accurate model that can be used to predict sales on the basis of the TV advertising budgets.  
 
 
 #Data
 
-The Advertising data set consists of the Sales (in thousands of units) of a particular product in 200 different
-markets, along with advertising budgets (in thousands of dollars) for the product in each of those markets for
-three different media: TV, Radio, and Newspaper.
+The Advertising data set consists of the Sales (in thousands of units) of a particular product in 200 different markets, along with advertising budgets (in thousands of dollars) for the product in each of those markets for three different media: TV, Radio, and Newspaper.
 
 
 
@@ -54,6 +51,10 @@ sum_table = xtable(sum_reg$coefficient, caption="Information about Regression Co
 print(sum_table, comment=FALSE, type = "latex")
 ```
 
+
+-Under the null hyopthesis, p-value of intercept is significant to reject the null. The estimate of the intercept is `r sum_reg$coefficients[1,1]` with sd `r sum_reg$coefficients[1,2]`
+
+-Under the null hyopthesis, p-value of slope is significant to reject the null. The estimate of the slope is `r sum_reg$coefficients[1,2]` with `r sum_reg$coefficients[2,2]`
 
 
 More information about the least squares model is given in the table below:  
