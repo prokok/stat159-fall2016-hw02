@@ -14,4 +14,5 @@ Advertising.csv, eda-output.txt, regression.RData are in Data Directory.
 	
 	
 Author : Phil Hoon, Oh
+
 Contributors : Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani	
