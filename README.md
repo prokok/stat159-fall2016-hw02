@@ -15,5 +15,5 @@ In this repository, there are 4 directories: data, code, images, report
 
 'report' contains report.Rmd, report.pdf.
 
-
+	
 Author : Phil Hoon, Oh
