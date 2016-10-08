@@ -4,7 +4,8 @@ Data
 Advertising.csv, eda-output.txt, regression.RData are in Data Directory.
 
 * Advertising.csv
-	It is the main data set downloaded from http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv.
+	It is the main data set downloaded from http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv.  
+	
 	(Credit to : Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani)
 	
 * eda-output.txt
