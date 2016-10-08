@@ -10,7 +10,7 @@ There are two R scripts in code directory: eda-script.R, regression-script.R
 
 * regression-script.R does the followings:
 	1. It reads the Advertising.csv data set from the data directory
-	2. It computes the "regression" object using lm() function, summary of the lm() function and save them in regression.RData. 
+	2. It computes the "regression" object using lm() function, summary of the lm() function and save them in regression.RData located in the data directory. 
 	3. It generates the scatterplot with the regression line in png and pdf formats and saves the scatterplot in the image directory.	
  
 Author : Phil Hoon, Oh
