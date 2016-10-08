@@ -1,6 +1,6 @@
 .PHONY: all data clean
 
-all: paper/report.pdf data/eda-output.txt data/regression.Rdata
+all: report/report.pdf data/eda-output.txt data/regression.Rdata
 
 data: 
 	curl -O "http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv"
