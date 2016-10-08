@@ -70,7 +70,7 @@ print(indice_table, comment=FALSE, type="latex")
 
 - R sqaure is the percent of variation that can be explained by the regression equation. It means that about `r sum_reg$r.squared*100` precent of variations in sales can be explained by the regression equation.
 - Residual Standard Error refers the estimated standard error of residuals. It measures the distance between the data point and the regression equation. Here, RSE is `r sum_reg$sigma` on 198 degrees of freedom.
-- In simple linear regression, null hypothesis of F-test is 'slope equals to zero.' Here, F-statistics is `r sum_reg$fstatistic[1]` and p-value of F-statistics is significant to reject the null.
+- In simple linear regression, null hypothesis of F-test is 'slope equals to zero.' Here, F-statistics is `r sum_reg$fstatistic[1]` which is significant to reject the null.
 
 
 
